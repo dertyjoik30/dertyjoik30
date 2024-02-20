@@ -1,0 +1,33 @@
+ public void handleError() 
+  throws CDSEventServiceSubscriberException {} 
+ 
+  private static void displayUsage() 
+  { 
+    System.out.println(); 
+    System.out.print("Usage :java CDSBillingSubscriber "); 
+    System.out.print("clientID subName selector "); 
+    System.out.print("durable transactional "); 
+    System.out.print("jndiCtxFactory connFactory "); 
+    System.out.print("providerURL topicName"); 
+    System.out.println(); 
+    System.out.println(); 
+    System.out.print("For selector, you can specify null or "); 
+    System.out.print("JMSCorrelationID=<event>"); 
+    System.out.println(); 
+    System.out.println(); 
+    System.out.println("\t Terminating Program ..."); 
+    System.exit(-1); 
+  } 
+ 
+  public static void main(String[] args) 
+  { 
+    String clientID = null; 
+    String subName = null; 
+    String selector = null; 
+    boolean durable = false; 
+    boolean transactional = false; 
+    String jndiCtxFactory = null; 
+    String connFactory = null; 
+    String providerURL = null; 
+    String topicName = null; 
+    if (args.length == 9) 
